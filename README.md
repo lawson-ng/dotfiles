@@ -6,3 +6,7 @@ My personal dotfiles
 - Path themes: ```~/.poshthemes```
 - `eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/lawson.omp.json)"`
 - [Themes](https://ohmyposh.dev/docs/themes)
+
+## Shell Setup (MacOS)
+- https://the.exa.website/#installation
+- Oh-my-posh 
