@@ -1,0 +1,6 @@
+alias zshrc="vi ~/.zshrc"
+alias ll="exa --icons --long"
+alias gckt="git checkout"
+alias vimrc="vi ~/.vimrc"
+alias vimmap="vi ~/.config/maps.vim"
+alias vim="nvim"
