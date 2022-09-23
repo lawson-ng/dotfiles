@@ -7,7 +7,6 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
-  use "EdenEast/nightfox.nvim"
   use({
 	"nvim-treesitter/nvim-treesitter",
 	commit = "518e27589c0463af15463c9d675c65e464efc2fe",
