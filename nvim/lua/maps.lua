@@ -37,3 +37,5 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 
 keymap.set('n', '<C-s>', ':w')
 
+keymap.set('n', '<C-_>', ':Commentary<cr>')
+
