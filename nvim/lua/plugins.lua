@@ -11,18 +11,9 @@ end
 
 local packer_bootstrap = ensure_packer()
 
-local status, packer = pcall(require, "packer")
-if (not status) then
-  print("Packer is not installed")
-	if packer_bootstrap then
-		require('packer').sync()
-	end
-  return
-end
-
 vim.cmd [[packadd packer.nvim]]
 
-packer.startup(function(use)
+return require('packer').startup(function(use)
   -- Theme -- 
   use "EdenEast/nightfox.nvim"  
   use({
@@ -54,5 +45,7 @@ packer.startup(function(use)
   use 'tpope/vim-commentary'
   
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 end)
