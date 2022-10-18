@@ -10,9 +10,13 @@ local ensure_packer = function()
 end
 
 local packer_bootstrap = ensure_packer()
+
 local status, packer = pcall(require, "packer")
 if (not status) then
   print("Packer is not installed")
+	if packer_bootstrap then
+		require('packer').sync()
+	end
   return
 end
 
@@ -48,4 +52,7 @@ packer.startup(function(use)
 
   use 'L3MON4D3/LuaSnip'
   use 'tpope/vim-commentary'
+  
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
 end)
