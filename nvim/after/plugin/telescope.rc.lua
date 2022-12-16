@@ -49,6 +49,7 @@ vim.keymap.set('n', ';f',
       hidden = true
     })
   end)
+
 vim.keymap.set('n', ';r', function()
   builtin.live_grep()
 end)
