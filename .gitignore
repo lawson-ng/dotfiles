@@ -2,3 +2,6 @@ coc/*
 configstore/*
 fish/*
 yarn/*
+.DS_Store*
+flameshot
+gh*

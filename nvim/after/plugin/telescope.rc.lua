@@ -52,18 +52,23 @@ vim.keymap.set('n', ';f',
 vim.keymap.set('n', ';r', function()
   builtin.live_grep()
 end)
+
 vim.keymap.set('n', '\\\\', function()
   builtin.buffers()
 end)
+
 vim.keymap.set('n', ';t', function()
   builtin.help_tags()
 end)
+
 vim.keymap.set('n', ';;', function()
   builtin.resume()
 end)
+
 vim.keymap.set('n', ';e', function()
   builtin.diagnostics()
 end)
+
 vim.keymap.set("n", "sf", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",
@@ -76,3 +81,4 @@ vim.keymap.set("n", "sf", function()
     layout_config = { height = 40 }
   })
 end)
+
