@@ -45,6 +45,8 @@ return require('packer').startup(function(use)
   use 'tpope/vim-commentary'
   
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+  use 'tpope/vim-fugitive'
+  use 'rbong/vim-flog'
   if packer_bootstrap then
     require('packer').sync()
   end

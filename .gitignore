@@ -2,3 +2,8 @@ coc/*
 configstore/*
 fish/*
 yarn/*
+flameshot/
+gcloud/
+gh/
+psysh/
+tmux/
