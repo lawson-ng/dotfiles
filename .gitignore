@@ -5,3 +5,8 @@ yarn/*
 .DS_Store*
 flameshot
 gh*
+flameshot/
+gcloud/
+gh/
+psysh/
+tmux/
