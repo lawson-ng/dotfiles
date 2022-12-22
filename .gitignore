@@ -2,6 +2,9 @@ coc/*
 configstore/*
 fish/*
 yarn/*
+.DS_Store*
+flameshot
+gh*
 flameshot/
 gcloud/
 gh/

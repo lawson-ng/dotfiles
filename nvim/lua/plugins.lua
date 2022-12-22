@@ -43,10 +43,15 @@ return require('packer').startup(function(use)
 
   use 'L3MON4D3/LuaSnip'
   use 'tpope/vim-commentary'
-  
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-  use 'tpope/vim-fugitive'
-  use 'rbong/vim-flog'
+
+  use {
+  'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
   if packer_bootstrap then
     require('packer').sync()
   end
