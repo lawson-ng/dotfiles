@@ -32,7 +32,7 @@ keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 
-keymap.set('n', '<C-s>', ':w')
+keymap.set('n', '<C-s>', ':w<cr>')
 
 keymap.set('n', '<C-_>', ':Commentary<cr>')
 keymap.set('n', '<C-b>', ':NvimTreeToggle<cr>')

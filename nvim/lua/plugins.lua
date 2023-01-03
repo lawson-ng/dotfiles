@@ -15,7 +15,6 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   -- Theme -- 
-  use "EdenEast/nightfox.nvim"  
   use {
 	'nvim-lualine/lualine.nvim',
   	requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -26,6 +25,8 @@ return require('packer').startup(function(use)
   use "nvim-lua/plenary.nvim"
   use { "nvim-telescope/telescope-file-browser.nvim" }
   use { "dracula/vim", name = "dracula" }
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'MunifTanjim/prettier.nvim'
 
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
