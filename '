@@ -1,0 +1,35 @@
+local status, packer = pcall(require, "packer")
+if (not status) then
+  print("Packer is not installed")
+  return
+end
+
+vim.cmd [[packadd packer.nvim]]
+
+return require("packer").startup(function(use)
+  -- Color scheme --
+  use "eddyekofo94/gruvbox-flat.nvim"
+  use "kyazdani42/nvim-web-devicons"
+  -- Finder --
+	use {
+		"nvim-lualine/lualine.nvim",
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
+	use {"nvim-telescope/telescope.nvim", tag = "0.1.0"}
+	use "nvim-lua/plenary.nvim"
+	use {"nvim-telescope/telescope-file-browser.nvim"}
+
+  -- Tree --
+	use {"nvim-tree/nvim-tree.lua", tag = "nightly"}
+
+	use "jose-elias-alvarez/null-ls.nvim"
+	use "MunifTanjim/prettier.nvim"
+
+	use "onsails/lspkind-nvim"
+	use "hrsh7th/cmp-buffer"
+	use "hrsh7th/cmp-nvim-lsp"
+	use "hrsh7th/nvim-cmp"
+	use "neovim/nvim-lspconfig"
+	use "williamboman/mason.nvim"
+	use "williamboman/mason-lspconfig.nvim"
+end)
