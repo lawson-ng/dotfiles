@@ -10,5 +10,6 @@ keymap.set("n", "te", ":tabedit")
 keymap.set("n", "<C-s>", ":w<cr>")
 
 keymap.set("n", "<C-b>", ":NvimTreeToggle<cr>")
+keymap.set("n", "<C-B>", ":NvimTreeFocus<cr>")
 
 keymap.set("n", "<C-p>", '"+p')
