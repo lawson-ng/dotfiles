@@ -22,7 +22,6 @@ local packer_bootstrap = ensure_packer()
 vim.cmd[[packadd packer.nvim]]
 
 return require("packer").startup(function(use)
-  use 'nvim-tree/nvim-web-devicons'
   use {
     "windwp/nvim-autopairs",
       config = function() require("nvim-autopairs").setup {} end
