@@ -22,11 +22,6 @@ local packer_bootstrap = ensure_packer()
 vim.cmd[[packadd packer.nvim]]
 
 return require("packer").startup(function(use)
-  use {
-    "windwp/nvim-autopairs",
-      config = function() require("nvim-autopairs").setup {} end
-  }
-
   use 'eddyekofo94/gruvbox-flat.nvim'
 
 	use{"nvim-lualine/lualine.nvim"}
@@ -34,7 +29,7 @@ return require("packer").startup(function(use)
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.0",
 	}
-	use"nvim-lua/plenary.nvim"
+
 	use{ "nvim-telescope/telescope-file-browser.nvim" }
 	use"jose-elias-alvarez/null-ls.nvim"
 	use"MunifTanjim/prettier.nvim"
@@ -48,7 +43,6 @@ return require("packer").startup(function(use)
 	use"hrsh7th/nvim-cmp"
   use"williamboman/mason-lspconfig.nvim"
 
-	use"L3MON4D3/LuaSnip"
 	use"tpope/vim-commentary"
 	use{
 		"sindrets/diffview.nvim",
@@ -58,7 +52,4 @@ return require("packer").startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
 	use {"nvim-tree/nvim-tree.lua", tag = "nightly"}
 
-	if packer_bootstrap then
-		require("packer").sync()
-	end
 end)
