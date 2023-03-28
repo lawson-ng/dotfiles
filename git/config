@@ -1,13 +1,15 @@
 [user]
-  name = lawson.ng
+  name = lawson-ng
   email = abraham.lawson.dev@gmail.com
-  signingkey = ~/.ssh/id_rsa.pub
+  signingkey = "/Users/lawsonng/.ssh/id_rsa.pub"
 
 [init]
   defaultBranch = main
 
 [commit]
-  gpgsign = false
+	gpgsign = true
+
 [gpg]
   format = ssh
-
+[gpg "ssh"]
+	allowedsignersfile = /Users/lawsonng/.ssh/allowed_signers
