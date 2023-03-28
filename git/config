@@ -13,3 +13,5 @@
   format = ssh
 [gpg "ssh"]
 	allowedsignersfile = /Users/lawsonng/.ssh/allowed_signers
+[push]
+	autoSetupRemote = true
