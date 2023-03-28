@@ -1,6 +1,13 @@
 [user]
   name = lawson.ng
   email = abraham.lawson.dev@gmail.com
+  signingkey = ~/.ssh/id_rsa.pub
 
 [init]
   defaultBranch = main
+
+[commit]
+  gpgsign = false
+[gpg]
+  format = ssh
+
