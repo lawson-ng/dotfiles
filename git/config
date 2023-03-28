@@ -1,0 +1,6 @@
+[user]
+  name = lawson.ng
+  email = abraham.lawson.dev@gmail.com
+
+[init]
+  defaultBranch = main
