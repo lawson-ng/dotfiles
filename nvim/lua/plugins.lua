@@ -32,7 +32,6 @@ return require("packer").startup(function(use)
 
 	use{ "nvim-telescope/telescope-file-browser.nvim" }
 	use"jose-elias-alvarez/null-ls.nvim"
-	use"MunifTanjim/prettier.nvim"
 
 	use"onsails/lspkind-nvim"
   use 'wbthomason/packer.nvim'
