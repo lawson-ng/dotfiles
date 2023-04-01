@@ -15,3 +15,5 @@ psysh/
 gh
 
 iterm2
+
+tmux/plugins*

@@ -14,7 +14,7 @@ _G._packer.inside_compile = true
 
 local time
 local profile_info
-local should_profile = true
+local should_profile = false
 if should_profile then
   local hrtime = vim.loop.hrtime
   profile_info = {}
@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "/Users/lawsonng/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["diffview.nvim"] = {
-    loaded = true,
-    path = "/Users/lawsonng/.local/share/nvim/site/pack/packer/start/diffview.nvim",
-    url = "https://github.com/sindrets/diffview.nvim"
-  },
   ["gruvbox-flat.nvim"] = {
     loaded = true,
     path = "/Users/lawsonng/.local/share/nvim/site/pack/packer/start/gruvbox-flat.nvim",
@@ -144,10 +139,10 @@ _G.packer_plugins = {
     path = "/Users/lawsonng/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["plenary.nvim"] = {
+  ["prettier.nvim"] = {
     loaded = true,
-    path = "/Users/lawsonng/.local/share/nvim/site/pack/packer/start/plenary.nvim",
-    url = "https://github.com/nvim-lua/plenary.nvim"
+    path = "/Users/lawsonng/.local/share/nvim/site/pack/packer/start/prettier.nvim",
+    url = "https://github.com/MunifTanjim/prettier.nvim"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,

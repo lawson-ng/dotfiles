@@ -25,17 +25,23 @@ return require("packer").startup(function(use)
   use 'eddyekofo94/gruvbox-flat.nvim'
 
 	use{"nvim-lualine/lualine.nvim"}
+
+  use "nvim-lua/plenary.nvim"
+
 	use{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.0",
 	}
 
 	use{ "nvim-telescope/telescope-file-browser.nvim" }
-	use"jose-elias-alvarez/null-ls.nvim"
 
 	use"onsails/lspkind-nvim"
   use 'wbthomason/packer.nvim'
+
 	use"neovim/nvim-lspconfig"
+	use"jose-elias-alvarez/null-ls.nvim"
+  use 'MunifTanjim/prettier.nvim'
+
 	use"williamboman/mason.nvim"
 	use"hrsh7th/cmp-buffer"
 	use"hrsh7th/cmp-nvim-lsp"
@@ -43,10 +49,6 @@ return require("packer").startup(function(use)
   use"williamboman/mason-lspconfig.nvim"
 
 	use"tpope/vim-commentary"
-	use{
-		"sindrets/diffview.nvim",
-		requires = "nvim-lua/plenary.nvim",
-	}
 
   use 'kyazdani42/nvim-web-devicons'
 	use {"nvim-tree/nvim-tree.lua", tag = "nightly"}

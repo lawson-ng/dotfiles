@@ -1,6 +1,6 @@
 [user]
-  name = lawson-ng
-  email = abraham.lawson.dev@gmail.com
+	name = lawson-ng
+	email = abraham.lawson.dev@gmail.com
   signingkey = "/Users/lawsonng/.ssh/id_rsa.pub"
 
 [init]
@@ -8,6 +8,7 @@
 
 [commit]
 	gpgsign = true
+	template = /Users/lawsonng/.stCommitMsg
 
 [gpg]
   format = ssh
@@ -15,3 +16,11 @@
 	allowedsignersfile = /Users/lawsonng/.ssh/allowed_signers
 [push]
 	autoSetupRemote = true
+[core]
+	excludesfile = /Users/lawsonng/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
