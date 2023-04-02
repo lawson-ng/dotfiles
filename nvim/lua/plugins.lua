@@ -38,15 +38,20 @@ return require("packer").startup(function(use)
 	use"onsails/lspkind-nvim"
   use 'wbthomason/packer.nvim'
 
-	use"neovim/nvim-lspconfig"
+
 	use"jose-elias-alvarez/null-ls.nvim"
+  use "jay-babu/mason-null-ls.nvim"
   use 'MunifTanjim/prettier.nvim'
 
-	use"williamboman/mason.nvim"
+  use {
+     "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig"
+  }
+
 	use"hrsh7th/cmp-buffer"
 	use"hrsh7th/cmp-nvim-lsp"
 	use"hrsh7th/nvim-cmp"
-  use"williamboman/mason-lspconfig.nvim"
 
 	use"tpope/vim-commentary"
 

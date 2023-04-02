@@ -1,2 +1,2 @@
 .git*
-tmux*
+tmux/plugins/*
