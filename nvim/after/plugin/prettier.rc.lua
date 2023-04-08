@@ -1,9 +1,8 @@
 local prettier = require("prettier")
 
 prettier.setup({
-	bin = "prettierd",
+	bin = "prettier",
 	filetypes = {
-		"lua",
 		"css",
 		"javascript",
 		"javascriptreact",

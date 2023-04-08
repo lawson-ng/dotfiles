@@ -25,8 +25,7 @@ return require("packer").startup(function(use)
 
 	use({ "nvim-lualine/lualine.nvim" })
 
-	use("nvim-lua/plenary.nvim")
-
+	use("nvim-lua/plenary.nvim") -- Dependency
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.0",
@@ -46,11 +45,6 @@ return require("packer").startup(function(use)
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 	})
-
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/nvim-cmp")
-
 	use("tpope/vim-commentary")
 
 	use("kyazdani42/nvim-web-devicons")
