@@ -17,4 +17,6 @@ keymap.set('n', '<C-B>', ':NvimTreeFocus<cr>')
 
 keymap.set('n', '<C-p>', '"+p')
 
+keymap.set('n', '`w', ':vs<cr>')
+keymap.set('n', '`v', ':sp<cr>')
 -- End Normal Mode --
