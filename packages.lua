@@ -1,3 +1,4 @@
+print("start")
 require("nvim.plugin.packer_compiled")
 
 file = io.open("plugins.txt", "a")
@@ -6,3 +7,5 @@ for key, value in pairs(plugins) do
 	file:write(key .. " " .. value.url .. "\n")
 end
 file:close()
+
+print("done")
