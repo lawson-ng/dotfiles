@@ -1,13 +1,13 @@
 local ensure_packer = function()
 	local fn = vim.fn
-	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+	local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 	if fn.empty(fn.glob(install_path)) > 0 then
 		fn.system({
-			"git",
-			"clone",
-			"--depth",
-			"1",
-			"https://github.com/wbthomason/packer.nvim",
+			'git',
+			'clone',
+			'--depth',
+			'1',
+			'https://github.com/wbthomason/packer.nvim',
 			install_path,
 		})
 		vim.cmd([[packadd packer.nvim]])
@@ -20,41 +20,28 @@ local packer_bootstrap = ensure_packer()
 
 vim.cmd([[packadd packer.nvim]])
 
-return require("packer").startup(function(use)
-	use("eddyekofo94/gruvbox-flat.nvim")
+return require('packer').startup(function(use)
+	use('wbthomason/packer.nvim')
 
-	use({ "nvim-lualine/lualine.nvim" })
+	use({ 'nvim-lualine/lualine.nvim' })
 
-	use("nvim-lua/plenary.nvim") -- Dependency
+	use({ 'catppuccin/nvim', as = 'catppuccin' })
 	use({
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
+		'nvim-telescope/telescope-file-browser.nvim',
+		requires = { 'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim' },
 	})
-
-	use({ "nvim-telescope/telescope-file-browser.nvim" })
-
-	use("onsails/lspkind-nvim")
-	use("wbthomason/packer.nvim")
-
-	use("jose-elias-alvarez/null-ls.nvim")
-	use("jay-babu/mason-null-ls.nvim")
-	use("MunifTanjim/prettier.nvim")
+	use('jose-elias-alvarez/null-ls.nvim')
+	use('jay-babu/mason-null-ls.nvim')
+	use('MunifTanjim/prettier.nvim')
 
 	use({
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-		"neovim/nvim-lspconfig",
+		'williamboman/mason.nvim',
+		'williamboman/mason-lspconfig.nvim',
+		'neovim/nvim-lspconfig', -- Configurations for NVim LSP
 	})
-	use("tpope/vim-commentary")
+	use('tpope/vim-commentary')
 
-	use("kyazdani42/nvim-web-devicons")
-	use({ "nvim-tree/nvim-tree.lua", tag = "nightly" })
-
-	use({
-		"windwp/nvim-autopairs",
-		config = function()
-			require("nvim-autopairs").setup({})
-		end,
-	})
-	use("f-person/git-blame.nvim")
+	use('kyazdani42/nvim-web-devicons')
+	use({ 'nvim-tree/nvim-tree.lua', tag = 'nightly' })
+	use('f-person/git-blame.nvim')
 end)
