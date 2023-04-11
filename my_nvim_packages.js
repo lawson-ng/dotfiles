@@ -10,7 +10,7 @@ packages.forEach((package) => {
   let str = "";
   const name = package.split(" ").at(0);
   const url = package.split(" ").at(-1);
-  str += `[${name}](${url}):`;
+  str += `- [${name}](${url}):`;
   const api = url.replace("github.com", "api.github.com/repos");
 
   fetch(api)
