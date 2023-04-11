@@ -4,6 +4,8 @@ require('mason-lspconfig').setup({
 })
 
 local opts = { noremap = true, silent = true }
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
@@ -39,4 +41,5 @@ local lsp_flags = {
 require('lspconfig')['tsserver'].setup({
 	on_attach = on_attach,
 	flags = lsp_flags,
+	capabilities = capabilities,
 })
