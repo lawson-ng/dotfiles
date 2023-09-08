@@ -18,6 +18,7 @@
 	autoSetupRemote = true
 [core]
 	excludesfile = /Users/lawsonng/.gitignore_global
+	ignorecase = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

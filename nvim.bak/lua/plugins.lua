@@ -40,6 +40,9 @@ return require('packer').startup(function(use)
 
 	use('MunifTanjim/prettier.nvim')
 
+	use('saadparwaiz1/cmp_luasnip')
+	use('L3MON4D3/LuaSnip')
+
 	-- Auto Complete --
 	use('hrsh7th/cmp-nvim-lsp')
 	use('hrsh7th/nvim-cmp')

@@ -1,6 +1,2 @@
-  require('maps')
-  require('base')
-  require('hightlights')
-  require('plugins')
-  require('nvim-tree').setup()
-
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
