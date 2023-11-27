@@ -8,12 +8,9 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("lazy").setup({
   spec = {
-  { "ellisonleao/gruvbox.nvim" },
-
     -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim", opts = {
-      colorscheme = "gruvbox",
-    }, import = "lazyvim.plugins" }, -- import any extras modules here
+    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    -- import any extras modules here
     -- { import = "lazyvim.plugins.extras.lang.typescript" },
     -- { import = "lazyvim.plugins.extras.lang.json" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
@@ -29,7 +26,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "gruvbox" } },
+  install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
@@ -47,3 +44,4 @@ require("lazy").setup({
     },
   },
 })
+
